@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myform" onsubmit="return check()">
+        <label>Enter name:</label><br>
+        <input type="text" name="fname"><br><br>
+        <label for="">Enter Email id</label><br>
+        <input type="text" name="mail"><br><br>
+        <br><br>
+        <label for="">Select Qualification</label>
+        <input type="checkbox" name="edu" value="ssc">ssc
+        <input type="checkbox" name="edu" value="hsc">hsc
+
+        <input type="checkbox" name="edu" value="BE">BE
+        <input type="checkbox" name="edu" value="Cdac">Cdac
+
+        <br><br>
+        <label for="">Select Course:</label>
+        <select name="course"> 
+        <option value="">Select Your Course</option>
+        <option value="html">Html</option>
+        <option value="css">css</option>
+        <option value="js">js</option>
+        <option value="java">java</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    <script src="./formValidation.js"></script>
+</body>
+
+</html>

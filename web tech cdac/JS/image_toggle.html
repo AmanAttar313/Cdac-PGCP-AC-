@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../assets/gulab jamun types/chocolate gulab jamun.jpg" alt="" id="mainImg">
+    
+    <br><br>
+    <button type="button" onclick="changeImg()">Change Image</button>
+
+    <script>
+        let count=1;
+        function changeImg(){
+
+        if(count==1){
+            document.getElementById("mainImg").src="../assets/gulab jamun types/rabdi gulab jamun.jpg";
+            count=2;
+        }
+         else if (count == 2) {
+        document.getElementById("mainImg").src = "../assets/gulab jamun types/rose gulab jamun.jpg";
+        count = 3;
+    }
+    else {
+        document.getElementById("mainImg").src = "../assets/gulab jamun types/coconut gulab jamun.jpg";
+        count = 1;
+    }
+        }
+
+    </script>
+</body>
+</html>

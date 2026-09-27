@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formid">
+        <label for="">Enter You want</label><br>
+        <input type="text" id="inputdata"><br>
+        <button type="button" onclick="add()">Submit</button>
+
+    </form>
+
+    <ul id="uladd">
+
+    </ul>
+
+    <script>
+        document.getElementById("inputdata");
+
+
+        function add() {
+            let ul = document.getElementById("uladd");
+            for (let i = 0; i < arr.length; i++) {
+
+                let newli1 = document.createElement("li");
+                newli1.innerText = arr[i];
+                ul.appendChild(newli1);
+            }
+        }
+    </script>
+</body>
+
+</html>

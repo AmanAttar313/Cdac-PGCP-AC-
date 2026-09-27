@@ -1,0 +1,14 @@
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: chocolate;
+    font-size: 15px;
+    border: solid mediumpurple 10px;
+    padding: 54px;
+    margin: 100px;
+}
+#img1 {
+    border: 10px solid rosybrown;
+    height: 256px;
+    width: 200px;
+    border-radius: 60%;+
+}

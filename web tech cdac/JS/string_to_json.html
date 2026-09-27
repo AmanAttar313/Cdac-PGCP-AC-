@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let employee={
+            id:1,name:"aman",
+            address:{
+                city:"mumbai"
+            },
+            techstack:{
+                tech1:"java",tech2:"js"
+            }
+        }
+
+        let jsondata=JSON.stringify(employee);
+        document.write(jsondata);
+        document.write("<br>================================================================<br>")
+        let jsObjData=JSON.parse(jsondata);
+        document.write(jsObjData);
+        document.write("<br>================================================================<br>")
+
+        document.write(jsObjData.id);
+        document.write("<br>================================================================<br>")
+
+        document.write(`id: ${jsObjData.id} adrees: ${employee.address.city} `);
+
+
+    </script>
+</body>
+</html>

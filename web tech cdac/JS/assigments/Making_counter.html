@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <span id="count">Counter : <b id="id1"></b></span>
+    <button id="increment" onclick="counter_increment()">increament</button>
+    <button id="decrement" onclick="counter_decrement()">increament</button>
+    <button id="decrement" onclick="reset()">reset</button>
+
+
+      <script>  
+    //counter using increment decrement button
+        let count=0;
+
+        function counter_increment(){
+            count+=1;
+            document.getElementById("id1").innerHTML=count;   
+               
+        }
+        function counter_decrement(){
+            count-=1
+            document.getElementById("id1").innerHTML=count; 
+        }
+        function reset(){
+            count=0;
+            document.getElementById("id1").innerHTML=count; 
+        }
+        </script>
+</body>
+</html>

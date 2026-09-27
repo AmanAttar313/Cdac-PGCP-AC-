@@ -1,0 +1,22 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+
+
+
+int main()
+{		
+		cout<<"*";
+    
+    for(int i=1;i<=5;i++){
+    	
+    	cout<<"\n*"<<setw(i)<<"*";
+    	
+    	
+    	
+	}
+	cout<<"\n*******";
+
+    return 0;
+}

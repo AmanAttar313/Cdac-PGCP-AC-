@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="txt1">Enter Your Name : </label>
+        <input type="text" name="Fname" id="txt1" minlength="2" maxlength="10" pattern="^[a-zAz]{2,10}$" placeholder="Fulname">
+        <br><br>
+
+        <label for="txt2">Enter Password</label>
+        <input type="password" required id="txt2" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="password">
+        <br><br>
+
+        <label for="">Enter Your Email</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label for="">Enter mobile number</label>
+        <input type="tel"  name="mobno" required pattern="^[0-9]{10,11}">
+        <br><br>
+
+        <label for="">enter your age</label>
+        <input type="number" required name="age" min="18" max="40">
+        <br><br>
+
+        <label for="">Enter DOB</label>
+        <input type="date" name="dob" required>
+        <br><br>
+
+        <label for="">select gender</label>
+        <input type="radio" name="gender" value="male" checked required>male
+        <input type="radio" name="gender" value="female" required>female
+        <br><br>
+
+        <label for="">select your qualification</label>
+        <input type="checkbox" name="edu" value="ssc">ssc
+        <input type="checkbox" name="edu" value="ug">ug
+        <input type="checkbox" name="edu" value="pg">pg
+        <br><br>
+
+        <label for="">Select your course</label>
+        <select name="couse" id="">
+            <option value="react">react</option>
+            <option value="js">js</option>
+            <option value="java">java</option>
+        </select> 
+        <br><br>
+
+
+        <label for="">fees</label>
+        <input type="text" value="12000" readonly disabled>
+        <br><br>
+
+        <label for="">Enter Your Feedback</label>
+        <textarea name="Feedback" id="" placeholder="Feedback"></textarea>
+        <br><br>
+
+        <label for="">Select Your Color</label>
+        <input type="color" name="color">
+        <br><br>
+
+        <label for="">Select time</label>
+        <input type="time" name="time">
+        <br><br>
+
+        <label for="">Select week</label>
+        <input type="week" name="week">
+        <br><br>
+
+        <label for="">Select datetime</label>
+        <input type="datetime" name="datetime">
+        <br><br>
+
+         <label for="">Select datetime local</label>
+        <input type="datetime-local" name="datetime local">
+        <br><br>
+
+        <button type="submit">submit</button>
+        
+    </form>
+</body>
+</html>

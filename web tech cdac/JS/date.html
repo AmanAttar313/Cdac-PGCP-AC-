@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <div id="d10"></div>
+    <div id="d11"></div>
+    
+    <script>
+        let dobj=new Date();
+        document.getElementById("d1").innerHTML=dobj;
+        document.getElementById("d2").innerHTML=dobj.getDate();
+        document.getElementById("d3").innerHTML=dobj.getDay();
+        document.getElementById("d4").innerHTML=dobj.getFullYear();
+        
+
+        let today=new Date();
+
+        switch(today){
+            case "1":{
+                document.getElementById("d4").innerHTML="Sunday"
+                break;
+            }
+            case "2":{
+                document.getElementById("d4").innerHTML="Monday"
+                break;
+            }
+            case "3":{
+                document.getElementById("d4").innerHTML="Tuesday"
+                break;
+            }
+            case "4":{
+                document.getElementById("d4").innerHTML="Wednesday"
+                break;
+            }
+            case "5":{
+                document.getElementById("d4").innerHTML="Thursday"
+                break;
+            }
+            case "6":{
+                document.getElementById("d4").innerHTML="Friday"
+                break;
+            }
+            case "7":{
+                document.getElementById("d4").innerHTML="Saturday"
+                break;
+            }
+
+
+        }
+
+        //digital clock
+        function myClock(){
+            let obj=new Date();
+            document.getElementById("d8").innerHTML=obj.toLocaleTimeString();
+        }
+
+        //my clock 
+        setInterval(myClock,1000);
+
+        // set date and time
+        let mydate=new Date("2015","02","10","10","30","45");
+        document.getElementById("d9").innerHTML=mydate;
+
+
+
+
+    </script>
+</body>
+</html>

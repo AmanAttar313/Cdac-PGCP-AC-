@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <div id="parent">
+        <p id="child1">chil1</p>
+        <p id="child2">chil2</p>
+    </div>
+    <hr>
+
+    <ul id="parentul">
+        <li>mango</li>
+        <li>Chiku</li>
+    </ul>
+
+    <hr>
+
+    <ul id="ulbyarray">
+
+    </ul>
+    <hr>
+    <table id="tableParent">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Post</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script>
+        // get paraent element
+        let parentElement = document.getElementById("parent");
+        console.log(parentElement)
+
+        // create element dynamically 
+        let newPara = document.createElement("p");
+        // attribute assign
+        newPara.setAttribute("id", "child 3");
+        // assign data to element
+        newPara.innerText = "Child 3";
+        // add new element into parent element
+        parentElement.appendChild(newPara);
+        // //=================================================================
+        let parentUl = document.getElementById("parentul");
+
+        let newli = document.createElement("li");
+
+        newli.innerText = "Graphes";
+        parentUl.appendChild(newli);
+        // //==================================================================
+        // array data insert into ul(unordered list) dynamically
+
+        let arr = ["Apple", "Banana", "Mango", "Graphes"];
+        let ul = document.getElementById("ulbyarray");
+        for (let i = 0; i < arr.length; i++) {
+
+            let newli1 = document.createElement("li");
+            newli1.innerText = arr[i];
+            ul.appendChild(newli1);
+        }
+        // //==================================================================
+
+        // // 
+
+        let emp = [
+            { id: 1, name: "aman", post: "Developer", Salary: 1000 },
+            { id: 2, name: "Ajinkya", post: "HR", Salary: 20000 },
+            { id: 3, name: "Aqsa", post: "CEO", Salary: 150000 },
+            { id: 4, name: "Humaira", post: "Founder", Salary: 900000 },
+        ];
+        let table = document.getElementById("tableBody");
+        // for (let i = 0; i < emp.length; i++) {
+        //     let newTh = document.createElement("th");
+        //     newTh.innerText = emp[i];
+
+        //     let newtr = document.createElement("tr");
+
+        //     newtr.innerHTML=`<td>${emp[i].id}</td> 
+        //     <td>${emp[i].name}</td> 
+        //     <td>${emp[i].post}</td> 
+        //     <td>${emp[i].Salary}</td> `;
+
+        //     tableBody.appendChild(newtr);
+
+        // }
+
+        //// dynamic create td also
+        for (let a of emp) {
+            let newTr = document.createElement("tr");
+
+            let newTd1 = document.createElement("td");
+            newTd1.innerText = a.id;
+
+            let newTd2 = document.createElement("td");
+            newTd2.innerText = a.name;
+
+            let newTd3 = document.createElement("td");
+            newTd3.innerText = a.post;
+
+            let newTd4 = document.createElement("td");
+            newTd4.innerText = a.Salary;
+
+            newTr.appendChild(newTd1);
+            newTr.appendChild(newTd2);
+            newTr.appendChild(newTd3);
+            newTr.appendChild(newTd4);
+
+            tableBody.appendChild(newTr);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

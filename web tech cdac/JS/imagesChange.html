@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image change</title>
+</head>
+<body>
+
+    <div >
+        <img src="../assets/sweets.png" alt="" id="mainImg" style="width: 250px;">
+        <br><br>
+        <img src="../assets/shorma.png" alt="" srcset="" style="width: 100px;" onclick="changeImg1()">
+        <img src="../assets/gulab jamun types/rabdi gulab jamun.jpg" alt="" style="width: 100px;" onclick="changeImg2()">
+        <img src="../assets/gulab jamun types/rose gulab jamun.jpg" alt=""style="width: 100px;" onclick="changeImg3()">
+        
+    </div>
+    <script>
+
+        function changeImg1(){
+            document.getElementById("mainImg").src="../assets/shorma.png";
+            
+        }
+        function changeImg2(){
+            let change =document.getElementById("mainImg").src="../assets/gulab jamun types/rabdi gulab jamun.jpg";
+            
+        }
+        function changeImg3(){
+            let change =document.getElementById("mainImg").src="../assets/gulab jamun types/rose gulab jamun.jpg";
+            
+        }
+    </script>
+</body>
+</html>

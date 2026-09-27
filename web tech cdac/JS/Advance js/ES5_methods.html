@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <script>
+
+        ////date : 27/9/26 
+        // trim method
+
+        let msg="           aman        ";
+        console.log( msg.trim());
+        console.log( msg.trimStart());
+        console.log( msg.trimEnd());
+
+
+        // for each
+        let num=[1,2,3,4,5,6,7,8,9];
+        let forOut=num.forEach((val,index)=>{
+            console.log(val+" "+index)
+        })
+
+        // map()
+        let mapout=num.map((val,index)=>{
+            if(val%2==0){
+                return val;
+            }
+        })
+        document.write(mapout)
+
+        // filter
+        let filterout=num.filter((val)=>{
+            return val%2==0;
+        })
+        document.write(filterout)
+
+        // every
+        let everyout=num.every((val)=>{
+            return val<0;
+        })
+        document.write(everyout)
+
+        // some
+        let Someout=num.some((val)=>{
+            return val>6;
+        })
+        document.write(Someout)
+
+        // reduce or reduceRight
+        let reduceOut=num.reduce((prev,next)=>{
+            return prev+next
+        })
+        document.write(reduceOut);
+
+        let reduceOutRight=num.reduceRight((prev,next)=>{
+            return prev+next
+        })
+        document.write(reduceOutRight);
+     </script>
+    
+</body>
+</html>

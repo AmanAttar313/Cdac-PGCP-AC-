@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object inside object with function
+        let student={
+            id:1,name:"Aman",contact:1225,
+            address:{
+                city:"pune",state:"maharashtra"
+            },
+            detail:function(){
+                return `id:${this.id} Name:${this.name} contact${student.contact} address${this.address.city} <br><br>`
+            }
+        }
+        document.write(student.detail());
+        
+        // object inside object
+        let employee={
+            id:1,name:"aman",
+            address:{
+                city:"mumbai"
+            },
+            techstack:{
+                tech1:"java",tech2:"js"
+            }
+        }
+
+        document.write(`id:${employee.id} name:${employee.name} city:${employee.address.city} 
+        tectstack:${employee.techstack.tech1} tectstack2:${employee.techstack.tech2}<br><br>`)
+
+
+        //
+        let emp=[
+            {id:1,name:"Aman",post:"Developer"},
+            {id:2,name:"Humaira",post:"CEO"},
+            {id:3,name:"babu",post:"HR"},
+            {id:4,name:"don",post:"BDA"}
+
+        ];
+
+        document.write(`id:${emp[0].id} name:${emp[0].name} post:${emp[0].post}
+        id:${emp[1].id} name:${emp[1].name} post:${emp[1].post}
+        id:${emp[2].id} name:${emp[2].name} post:${emp[2].post}
+        id:${emp[3].id} name:${emp[3].name} post:${emp[3].post}
+        <br><br>`)
+
+
+        for( let e of emp){
+            document.write(`id:${e.id} name:${e.name} post:${e.post} <br>`)
+        }
+       
+
+    </script>
+</body>
+</html>

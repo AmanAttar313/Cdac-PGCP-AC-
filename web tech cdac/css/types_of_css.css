@@ -1,0 +1,19 @@
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: chocolate;
+    font-size: 15px;
+    border: solid mediumpurple 10px;
+
+}
+.d{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(165, 101, 23);
+    
+}
+#myname{
+    text-decoration: wavy;
+}
+*{
+    background-color: antiquewhite;
+    font-family: monospace;
+}

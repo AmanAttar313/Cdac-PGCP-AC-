@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <textarea name="" id="temp"></textarea>
+    <textarea name="" id="permanant"></textarea>
+    <button type="button" onclick="save()">Save permanant</button>
+
+    </form>
+
+    <script>
+        function save(){
+
+        let temp=document.getElementById("temp").value;
+        document.getElementById("permanant").innerHTML=temp;
+        }
+
+    </script>
+</body>
+</html>
