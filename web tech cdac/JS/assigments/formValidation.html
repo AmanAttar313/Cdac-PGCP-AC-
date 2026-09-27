@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+
+        form {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: #007bff;
+        }
+
+        .gender,
+        .education {
+            margin-bottom: 20px;
+        }
+
+        .gender label,
+        .education label {
+            margin-bottom: 10px;
+        }
+
+        .gender input,
+        .education input {
+            margin-right: 5px;
+        }
+
+        .gender span,
+        .education span {
+            margin-right: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form name="myform" onsubmit="return check()">
+
+        <h2>Registration Form</h2>
+
+        <label>Enter Name:</label>
+        <input type="text" name="fname">
+
+        <br>
+
+        <label>Enter Email ID:</label>
+        <input type="text" name="mail">
+
+        <br>
+
+        <label>Enter Password:</label>
+        <input type="password" name="pass">
+
+        <br>
+
+        <label>Enter Contact Number:</label>
+        <input type="tel" name="contact">
+
+        <br>
+
+        <div class="gender">
+
+            <label>Choose Your Gender:</label>
+
+            <span>
+                <input type="radio" name="gender" value="Male">
+                Male
+            </span>
+
+            <span>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </span>
+
+            <span>
+                <input type="radio" name="gender" value="Other">
+                Other
+            </span>
+
+        </div>
+
+        <div class="education">
+
+            <label>Select Qualification:</label>
+
+            <span>
+                <input type="checkbox" name="edu" value="ssc">
+                SSC
+            </span>
+
+            <span>
+                <input type="checkbox" name="edu" value="hsc">
+                HSC
+            </span>
+
+            <span>
+                <input type="checkbox" name="edu" value="BE">
+                BE
+            </span>
+
+            <span>
+                <input type="checkbox" name="edu" value="Cdac">
+                CDAC
+            </span>
+
+        </div>
+
+        <label>Select Course:</label>
+
+        <select name="course">
+            <option value="">Select Your Course</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+            <option value="java">Java</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script src="./formValidation.js"></script>
+
+</body>
+
+</html>

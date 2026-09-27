@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="text"></div>
+
+    <form action="">
+        <textarea name="" id="oldText" placeholder="old text"></textarea>
+        <textarea name="" id="newText" placeholder="new text"></textarea>
+        <button type="button" onclick="replace()">Replace</button>
+        <button type="button" onclick="replaceAll()">Replace All</button>
+    </form>
+    <script>
+        let msg = "Nothing is in imposssible in this world";
+        document.getElementById("text").innerHTML = msg;
+
+        function replace() {
+            let text = document.getElementById("text").innerText;
+            let oldtext = document.getElementById("oldText").value;
+            let newText = document.getElementById("newText").value;
+
+            // replce text
+            text = text.replace(oldtext, newText);
+            // updated text 
+            document.getElementById("text").innerText = text;
+
+        }
+        function replaceAll() {
+            let text = document.getElementById("text").innerText;
+            let oldtext = document.getElementById("oldText").value;
+            let newText = document.getElementById("newText").value;
+
+            text = text.replaceAll(oldtext, newText);
+            document.getElementById("text").innerText = text;
+        }
+    </script>
+
+</body>
+
+</html>

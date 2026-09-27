@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day</title>
+</head>
+
+<body>
+
+    <div id="d4"></div>
+    <div id="d5"> </div>
+
+    <script>
+
+        let current = new Date();
+        let day = current.getDay();
+        let month = current.getMonth();
+
+        switch (day) {
+
+            case 0:
+                document.getElementById("d4").innerHTML = "Sunday";
+                break;
+
+            case 1:
+                document.getElementById("d4").innerHTML = "Monday";
+                break;
+
+            case 2:
+                document.getElementById("d4").innerHTML = "Tuesday";
+                break;
+
+            case 3:
+                document.getElementById("d4").innerHTML = "Wednesday";
+                break;
+
+            case 4:
+                document.getElementById("d4").innerHTML = "Thursday";
+                break;
+
+            case 5:
+                document.getElementById("d4").innerHTML = "Friday";
+                break;
+
+            case 6:
+                document.getElementById("d4").innerHTML = "Saturday";
+                break;
+        }
+
+        switch (month) {
+
+            case 0:
+                document.getElementById("d5").innerHTML = "january";
+                break;
+
+            case 1:
+                document.getElementById("d5").innerHTML = "February";
+                break;
+
+            case 2:
+                document.getElementById("d5").innerHTML = "March";
+                break;
+
+            case 3:
+                document.getElementById("d5").innerHTML = "April";
+                break;
+
+            case 4:
+                document.getElementById("d5").innerHTML = "May";
+                break;
+
+            case 5:
+                document.getElementById("d5").innerHTML = "June";
+                break;
+
+            case 6:
+                document.getElementById("d5").innerHTML = "July";
+                break;
+            case 7:
+                document.getElementById("d5").innerHTML = "August";
+                break;
+
+            case 8:
+                document.getElementById("d5").innerHTML = "September";
+                break;
+
+            case 9:
+                document.getElementById("d5").innerHTML = "Octomber";
+                break;
+
+            case 10:
+                document.getElementById("d5").innerHTML = "November";
+                break;
+
+            case 11:
+                document.getElementById("d5").innerHTML = "December";
+                break;
+        }
+
+    </script>
+
+</body>
+
+</html>

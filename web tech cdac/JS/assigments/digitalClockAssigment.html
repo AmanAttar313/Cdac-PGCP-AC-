@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        #d1 {
+            background-color: #000;
+            color: #ffb300;
+            padding: 30px 50px;
+            border: 8px solid #444;
+            border-radius: 8px;
+            font-size: 70px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            box-shadow:
+                0 0 10px #000,
+                inset 0 0 20px #333;
+            text-align: center;
+            min-width: 420px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="d1"></div>
+
+    <script>
+
+        // digital clock
+        function myClock() {
+
+            let obj = new Date();
+
+            document.getElementById("d1").innerHTML =
+                obj.toLocaleTimeString();
+
+        }
+
+        // my clock
+        setInterval(myClock, 1000);
+
+    </script>
+
+</body>
+
+</html>

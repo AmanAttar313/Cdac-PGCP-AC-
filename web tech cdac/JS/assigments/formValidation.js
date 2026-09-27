@@ -3,7 +3,12 @@ function check() {
     let regname = "^[a-zA-Z ]{2,20}$";
     let email = document.myform.mail.value;
     let regmail = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-
+    let pass=document.myform.pass.value;
+    let regpass= /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&*!]).{8,}$/;
+    let contact=document.myform.contact.value;
+    let regcontact=/^[6-9][0-9]{9}$/;
+    let gender=document.myform.gender.value;
+    let reggender=/^(Male|Female|Other)$/i;
     let uedu = document.myform.edu;
     let ucourse=document.myform.course.value;
 
@@ -25,6 +30,36 @@ function check() {
     if (!email.match(regmail)) {
         window.alert("Invalid Email");
         document.myform.mail.focus();
+        return false;
+    }
+    if(pass==""){
+        window.alert("Password required");
+        document.myform.pass.focus();
+        return false;
+    }
+    if(!pass.match(regpass)){
+        window.alert("Password invalid pls write correct password");
+        document.myform.pass.focus();
+        return false;
+    }
+    if(contact==""){
+        window.alert("pls write number");
+        document.myform.pass.focus();
+        return false;
+    }
+     if(!contact.match(regcontact)){
+        window.alert("invalid number");
+        document.myform.pass.focus();
+        return false;
+    }
+     if(gender==""){
+        window.alert("Pls select gender");
+        document.myform.pass.focus();
+        return false;
+    }
+     if(!gender.match(reggender)){
+        window.alert("Pls select gender");
+        document.myform.pass.focus();
         return false;
     }
 
