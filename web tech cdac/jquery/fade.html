@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <center>
+    <img src="../assets/iphone 18 pro.jpg" id="img1" alt="iphone18" width="300px" height="450px">
+    <br><br>
+    <button type="button" id="fadeOutbtn">fade out</button>
+    <button type="button" id="fadeInbtn">fade In</button>
+    <button type="button" id="fadeTogglebtn">fade Toggle</button>
+    <br><br>
+    <button type="button" id="SlideDown">SlideDown</button>
+    <button type="button" id="SlideUp">SlideUp</button>
+    <button type="button" id="SlideToggle">SlideToggle</button>
+        </center>
+    
+
+        <script>
+            $(document).ready(function () {
+                //fade
+             $("#fadeOutbtn").click(()=>{
+                $("#img1").fadeOut(2000);
+             }) 
+             $("#fadeInbtn").click(()=>{
+                $("#img1").fadeIn(2000);
+             }) 
+             $("#fadeTogglebtn").click(()=>{
+                $("#img1").fadeToggle(2000);
+             }) 
+
+            //  slide
+             $("#SlideUp").click(()=>{
+                $("#img1").slideDown(2000);
+             }) 
+             $("#SlideDown").click(()=>{
+                $("#img1").slideUp(2000);
+             }) 
+             $("#SlideToggle").click(()=>{
+                $("#img1").slideToggle(2000);
+             }) 
+            })
+
+
+        </script>
+
+</body>
+</html>

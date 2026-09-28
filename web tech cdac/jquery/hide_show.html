@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <img src="../assets/gulab jamun.jpg" id="img1"><br>
+    <button type="button" id="hidebtn">Hide</button>
+    <button type="button" id="Showbtn">Show</button>
+    <button type="button" id="togglebtn">Toggle</button>
+    <hr>
+    <center><img id="img2" src="../assets/gulab jamun types/rabdi gulab jamun.jpg" alt="" srcset=""></center>
+
+    <script>
+        $(document).ready(()=>{
+            $("#hidebtn").click(()=>{
+                $("#img1").hide(2000)
+            })
+
+            $("#Showbtn").click(()=>{
+                $("#img1").show(2000)
+            })
+            $("#togglebtn").click(()=>{
+                $("#img1").toggle(2000)
+            })
+
+            $("#img2").dblclick(function(){
+                $(this).hide(2000,window.alert("image hide successfulyy"));
+            })
+        })
+    </script>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "products":[
+        {"id":1,"name":"laptop","company_name":"lenovo","price":"100000"},
+        {"id":2,"name":"mobile","company_name":"apple","price":"1500000"},
+        {"id":3,"name":"Mouse","company_name":"lapcare","price":"700000"},
+        {"id":4,"name":"Keyboard","company_name":"dell","price":"600000"},
+        {"id":5,"name":"Battery","company_name":"lenovo","price":"500000"}
+    ],
+    "users":[
+        {"id":1,"uid":"admin","upass":"admin1224"},
+        {"id":2,"uid":"king","upass":"king65624"},
+        {"id":3,"uid":"don","upass":"don7224"}
+    ]
+}

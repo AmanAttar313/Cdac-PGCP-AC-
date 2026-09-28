@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <p id="d1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque impedit nobis assumenda voluptates eum itaque quo vel at quibusdam ab rem unde ipsum, repudiandae voluptatum numquam earum perferendis. Aperiam dolore consequuntur autem nam, vel dicta ipsa velit nulla non molestiae iure possimus fugiat facere obcaecati architecto? Debitis dolore voluptatum nihil vitae tempore consectetur corporis omnis adipisci repellat incidunt velit quam vel iusto ratione repellendus natus earum, officiis magnam esse, minus necessitatibus ipsum laborum. Distinctio eum molestiae explicabo! Ipsa ducimus dignissimos fuga hic voluptate minus, rem voluptatum! Eligendi veniam, amet inventore natus laboriosam quos eos libero unde voluptatibus corrupti fugiat repellat!
+
+    </p>
+    <hr>
+    <img src="../assets/gulab jamun types/coconut gulab jamun.jpg" id="img1" alt="" width="300px">
+    <script>
+        $(document).ready(function(){
+            $("#d1").mouseenter(function (){
+                $(this).css({"color":"blue","background-color":"gray","font-size":"25px"});
+
+            })
+            $("#d1").mouseleave(function (){
+                $(this).css({"color":"red","background-color":"aqua"});
+                
+            })
+            
+        })
+         $(document).ready(function(){
+        $("#img1").mouseenter(function (){
+                $(this).css({"border-radius":"50%"});
+
+            })
+            $("#img1").mouseleave(function (){
+                $(this).css({"border-radius":"0%"});
+                
+            })
+        })
+    </script>
+
+    
+</body>
+</html>
