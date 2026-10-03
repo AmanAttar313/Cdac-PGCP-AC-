@@ -15,8 +15,7 @@
     <hr>
 
     <ul id="parentul">
-        <li>mango</li>
-        <li>Chiku</li>
+        
     </ul>
 
     <hr>
@@ -24,6 +23,8 @@
     <ul id="ulbyarray">
 
     </ul>
+
+
     <hr>
     <table id="tableParent">
         <thead>
@@ -45,7 +46,7 @@
         console.log(parentElement)
 
         // create element dynamically 
-        let newPara = document.createElement("p");
+        let newPara = document.createElement("p"); 
         // attribute assign
         newPara.setAttribute("id", "child 3");
         // assign data to element
@@ -59,11 +60,13 @@
 
         newli.innerText = "Graphes";
         parentUl.appendChild(newli);
+
         // //==================================================================
         // array data insert into ul(unordered list) dynamically
 
-        let arr = ["Apple", "Banana", "Mango", "Graphes"];
+        let arr = ["Apple", "Banana", "Mango", "Graphes","Strawberry"];
         let ul = document.getElementById("ulbyarray");
+
         for (let i = 0; i < arr.length; i++) {
 
             let newli1 = document.createElement("li");
@@ -80,21 +83,23 @@
             { id: 3, name: "Aqsa", post: "CEO", Salary: 150000 },
             { id: 4, name: "Humaira", post: "Founder", Salary: 900000 },
         ];
+
         let table = document.getElementById("tableBody");
-        // for (let i = 0; i < emp.length; i++) {
-        //     let newTh = document.createElement("th");
-        //     newTh.innerText = emp[i];
 
-        //     let newtr = document.createElement("tr");
+        for (let i = 0; i < emp.length; i++) {
+            let newTh = document.createElement("th");
+            newTh.innerText = emp[i];
 
-        //     newtr.innerHTML=`<td>${emp[i].id}</td> 
-        //     <td>${emp[i].name}</td> 
-        //     <td>${emp[i].post}</td> 
-        //     <td>${emp[i].Salary}</td> `;
+            let newtr = document.createElement("tr");
 
-        //     tableBody.appendChild(newtr);
+            newtr.innerHTML=`<td>${emp[i].id}</td> 
+            <td>${emp[i].name}</td> 
+            <td>${emp[i].post}</td> 
+            <td>${emp[i].Salary}</td> `;
 
-        // }
+            tableBody.appendChild(newtr);
+
+        }
 
         //// dynamic create td also
         for (let a of emp) {
