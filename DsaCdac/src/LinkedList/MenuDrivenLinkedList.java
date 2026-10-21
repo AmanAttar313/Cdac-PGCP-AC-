@@ -51,14 +51,12 @@ public class MenuDrivenLinkedList {
 		 
 
 		            	case 3:
-		                	System.out.print("Enter element: ");
-	                    	data = sc.nextInt();
+		                	
 	                    	n.delete_left();
 		                	break;
 		                	
 		            	case 4:
-		                	System.out.print("Enter element: ");
-	                    	data = sc.nextInt();
+		                	
 	                    	n.delete_right();
 		                	break;
 		                	

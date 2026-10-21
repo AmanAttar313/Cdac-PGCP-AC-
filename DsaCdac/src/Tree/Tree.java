@@ -56,6 +56,54 @@ package Tree;
 	            System.out.print(r.data+",");
 	        }
 	    }
+	    
+	    // Find smallest node in right subtree
+	    Node minimum(Node r) {
+	        while (r.left != null) {
+	            r = r.left;
+	        }
+	        return r;
+	    }
+	    
+	    	Node delete(Node r,int key) {
+	    		boolean found=false;
+	    		if(r==null) {
+	    			found=false;
+	    			return found;
+	    		}
+	    		else if(key<r.data) {
+	    			return delete(r.left,key);	    		
+	    			}else if(key>r.data) {
+	    				return delete(r.right, key);
+	    			}
+	    			else {
+	    				//key found
+	    				// Case 1: No child
+	    				if(r.left==null && r.right==null) {
+	    					return null;
+	    				}
+	    				  // Case 2A: Only right child
+	    	            else if (r.left == null) {
+	    	                return r.right;
+	    	            }
+
+	    	            // Case 2B: Only left child
+	    	            else if (r.right == null) {
+	    	                return r.left;
+	    	            }
+
+	    	            // Case 3: Two children
+	    	            else {
+	    	                Node temp = minimum(r.right);
+	    	                r.data = temp.data;
+	    	                r.right = delete(r.right, temp.data);
+	    	            }
+	    	        }
+
+	    	        return r;
+	    			}
+	    		
+	    	}
 	    int count_node(Node r)//LPR
 	    {
 	        if(r==null)
