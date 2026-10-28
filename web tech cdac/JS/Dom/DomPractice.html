@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="child1">child 1</p>
+
+    </div>
+
+    <ul id="parentul"></ul>
+
+
+  <table id="tableId">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Post</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+<td></td>
+    </tbody>
+  </table>
+    <script>
+        let parentElement=document.getElementById("parent");
+        let para=document.getElementById("child1");
+   console.log(para.parentElement)
+        //  console.log(parentElement.parentElement)
+        let newPara=document.createElement("div");
+     
+        newPara.setAttribute("class","new div");
+        newPara.innerText="I am div";
+        parentElement.appendChild(newPara);
+
+
+
+
+////=================================================================
+
+        let parentUl=document.getElementById("parentul");
+        let newLi=document.createElement("li");
+        newLi.innerText="Graphes";
+
+        parentUl.appendChild(newLi);
+////=================================================================
+
+
+
+let arr=["Aman","aksu","motu","Saand","Batla"]
+let Pul=document.getElementById("parentul");
+
+for(let i=0;i<arr.length;i++){
+    let newLi=document.createElement("li");
+    newLi.innerText=arr[i];
+Pul.appendChild(newLi);
+    
+
+}
+
+
+
+
+////=================================================================
+let emp=[
+    {id:1,name:"AMAN",post:"developer",salary:1000},
+    {id:2,name:"AQSA",post:"FOunder",salary:12451000},
+    {id:3,name:"DON",post:"MANAGER",salary:221000},
+    
+]
+
+let tableBody=document.getElementById("tableBody");
+
+// for(let i=0;i<emp.length;i++){
+//     let newtr=document.createElement("tr");
+
+//     newtr.innerHTML=`<td>${emp[i].id}</td>
+//         <td>${emp[i].name}</td>
+//             <td>${emp[i].post}</td>
+//                 <td>${emp[i].salary}</td>`;
+//                     tableBody.appendChild(newtr);
+// }
+
+
+
+for(let a of emp){
+    let newtr=document.createElement("tr");
+
+    let td1=document.createElement("td");
+    td1.innerText=a.id;
+
+    let td2=document.createElement("td");
+    td2.innerText=a.name;
+
+    let td3=document.createElement("td");
+    td3.innerText=a.post;
+
+    let td4=document.createElement("td");
+    td4.innerText=a.salary;
+
+    newtr.appendChild(td1);
+    newtr.appendChild(td2);
+    newtr.appendChild(td3);
+    newtr.appendChild(td4);
+tableBody.appendChild(newtr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

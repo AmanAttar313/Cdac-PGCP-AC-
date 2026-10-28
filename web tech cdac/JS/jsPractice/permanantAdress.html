@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>temp addres</h2>
+    <textarea name="" id="tempadress" placeholder="ENter value" ></textarea>
+    <button onclick="saveAddress()">Save Permanant</button>
+    <h3>permant adress</h3>
+    <textarea name="" id="permantAdress"></textarea>
+
+    <script>
+        function saveAddress(){
+            let address=document.getElementById("tempadress").value;
+            document.getElementById("permantAdress").value=address;
+        }
+    </script>
+
+   
+</body>
+</html>

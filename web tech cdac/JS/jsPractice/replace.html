@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+
+    <title>Replace Text</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        textarea, input {
+            width: 400px;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h2>Replace and Replace All</h2>
+
+<textarea id="text" rows="5"
+placeholder="Enter your text"></textarea>
+
+<br>
+
+<input type="text" id="find"
+placeholder="Find word">
+
+<br>
+
+<input type="text" id="replace"
+placeholder="Replace with">
+
+<br>
+
+<button onclick="replaceOne()">Replace</button>
+
+<button onclick="replaceAll()">Replace All</button>
+
+<h3>Result:</h3>
+
+<p id="result"></p>
+
+
+<script>
+
+function replaceOne() {
+
+    let text = document.getElementById("text").value;
+
+    let find = document.getElementById("find").value;
+
+    let replace = document.getElementById("replace").value;
+
+    let result = text.replace(find, replace);
+
+    document.getElementById("result").innerText = result;
+}
+
+
+function replaceAll() {
+
+    let text = document.getElementById("text").value;
+
+    let find = document.getElementById("find").value;
+
+    let replace = document.getElementById("replace").value;
+
+    let result = text.replaceAll(find, replace);
+
+    document.getElementById("result").innerText = result;
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="text" placeholder="Enter text"></textarea>
+    
+    <input type="text" id="find" placeholder="">
+    <input type="text" id="replaceword">
+    <button onClick="replaceone()">Replace One</button>
+    <button onClick="replaceAll()">ReplaceAll</button>
+    <div id="result"></div>
+    <script>
+        function replaceone(){
+            let text=document.getElementById("text").value;
+            let find=document.getElementById("find").value;
+            let replace=document.getElementById("replaceword").value;
+            let result=text.replace(find,replace);
+            document.getElementById("result").innerText=result;
+        }
+         function replaceAll(){
+            let text=document.getElementById("text").value;
+            let find=document.getElementById("find").value;
+            let replace=document.getElementById("replaceword").value;
+            let result=text.replaceAll(find,replace);
+            document.getElementById("result").innerText=result;
+        }
+    </script>
+</body>
+</html>

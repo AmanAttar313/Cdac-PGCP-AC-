@@ -11,6 +11,7 @@
     <div id="parent">
         <p id="child1">chil1</p>
         <p id="child2">chil2</p>
+        
     </div>
     <hr>
 
@@ -43,14 +44,14 @@
     <script>
         // get paraent element
         let parentElement = document.getElementById("parent");
-        console.log(parentElement)
+        console.log(parentElement.parentElement)
 
         // create element dynamically 
         let newPara = document.createElement("p"); 
         // attribute assign
         newPara.setAttribute("id", "child 3");
         // assign data to element
-        newPara.innerText = "Child 3";
+        newPara.innerText = "Child 3 created";
         // add new element into parent element
         parentElement.appendChild(newPara);
         // //=================================================================
@@ -87,8 +88,8 @@
         let table = document.getElementById("tableBody");
 
         for (let i = 0; i < emp.length; i++) {
-            let newTh = document.createElement("th");
-            newTh.innerText = emp[i];
+            // let newTh = document.createElement("th");
+            // newTh.innerText = emp[i];
 
             let newtr = document.createElement("tr");
 

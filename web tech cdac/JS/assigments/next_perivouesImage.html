@@ -1,13 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next_Previous_image</title>
+
+    <title>Next Previous Image</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid black;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 20px 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
+
+    <h2>Next / Previous Image</h2>
+
+    <img id="image" src="image1.jpg" alt="Image">
+
+    <br>
+
+    <button onclick="previousImage()">Previous</button>
+
+    <button onclick="nextImage()">Next</button>
+
+
     <script>
-        
-            </script>
+
+        let images = [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg",
+            "image4.jpg"
+        ];
+
+        let index = 0;
+
+
+        function nextImage() {
+
+            index++;
+
+            if (index >= images.length) {
+                index = 0;
+            }
+
+            document.getElementById("image").src = images[index];
+        }
+
+
+        function previousImage() {
+
+            index--;
+
+            if (index < 0) {
+                index = images.length - 1;
+            }
+
+            document.getElementById("image").src = images[index];
+        }
+
+    </script>
+
 </body>
+
 </html>

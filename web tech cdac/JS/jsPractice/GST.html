@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+
+    <title>GST Calculator</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>GST Calculator</h2>
+
+<input type="number" id="amount"
+placeholder="Enter Amount">
+
+<br>
+
+<input type="number" id="gst"
+placeholder="Enter GST %">
+
+<br>
+
+<button onclick="calculateGST()">Calculate GST</button>
+
+<div id="result"></div>
+
+
+<script>
+
+function calculateGST() {
+
+    let amount = Number(document.getElementById("amount").value);
+
+    let gst = Number(document.getElementById("gst").value);
+
+    let gstAmount = (amount * gst) / 100;
+
+    let total = amount + gstAmount;
+
+    document.getElementById("result").innerHTML =
+        "GST Amount = ₹" + gstAmount.toFixed(2) +
+        "<br>Total Amount = ₹" + total.toFixed(2);
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Gst calvulator</h3>
+    <input type="number" id="amount">
+    <input type="number" id="gst">
+    <button onclick="calculateGst()">calculate gst</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateGst(){
+            let input=Number(document.getElementById("amount").value);
+            let gst=Number(document.getElementById("gst").value);
+
+            let gstcal=(gst*input)/100;
+            let total =gstcal+input;
+            
+            document.getElementById("result").innerHTML=
+            "GST amount="+ gstcal.toFixed(2)+
+            "<br> total amount ="+total.toFixed(2);
+            
+        }
+    </script>
+</body>
+</html>

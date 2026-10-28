@@ -42,19 +42,32 @@
 
     <script>
 
-        // digital clock
-        function myClock() {
+        // // digital clock
+        // function myClock() {
 
-            let obj = new Date();
+        //     let obj = new Date();
 
-            document.getElementById("d1").innerHTML =
-                obj.toLocaleTimeString();
+        //     document.getElementById("d1").innerHTML =
+        //         obj.toLocaleTimeString();
+
+        // }
+
+        // // my clock
+        // setInterval(myClock, 1000);
+
+
+
+
+
+
+
+        function myclock(){
+            let clock=new Date();
+
+            document.getElementById("d1").innerHTML=clock.toLocaleTimeString();
 
         }
-
-        // my clock
-        setInterval(myClock, 1000);
-
+    setInterval(myclock,1000);
     </script>
 
 </body>
