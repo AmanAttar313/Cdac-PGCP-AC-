@@ -11,6 +11,7 @@ public class Person {
 	}
 	public int getAge() { // non static 
 		System.out.println(person_count);
+		
 		return age;
 	}
 	
